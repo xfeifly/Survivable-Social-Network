@@ -1,0 +1,15 @@
+div.container
+	h2.text-center FSE SV7 SSNoC
+	form#loginForm.form-horizontal(name="loginForm")
+		div.form-group
+			input#userName.form-control(name="userName", placeholder='Username', type='text', ng-model='userName')
+		div.form-group
+			input#password.form-control(name="password", placeholder='Password', type='password', ng-model='password')
+		div.form-group.row
+			div.col-xs-2
+				button.btn.btn-info(type='submit', ng-click='login()') Login
+			div.col-xs-offset-1.col-xs-2
+				button.btn.btn-info(type='button', ng-show='signupButton', ng-click='signup()') Signup
+		div {{instruction}}
+
+

@@ -1,0 +1,22 @@
+h3 Public Warehouse:
+
+#content
+    #chat
+        #supplys
+            //.overflowable
+            ul
+                div.privateSupply Current Water: {{publicWater}}
+                br
+                div.privateSupply Current Food:  {{publicFood}}
+        div.clearer
+        .controls
+h4 Do you want to get supply?
+            form(ng-submit='getSupply()')
+                input#field(ng-model='getwater' placeholder='Food' type='number')
+                input#field(ng-model='getfood' placeholder='Water' type='number')
+                input#send(type='submit', value='Get')
+
+h5 Notice.1: You cannot get water or food when you have more than 10 units!
+h5 Notice.2: You cannot get water or food more than 10 units at one time!
+
+

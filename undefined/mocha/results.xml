@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.38000000000000006" tests="50" failures="0">
+  <testsuite name="Root Suite" timestamp="2016-04-20T19:25:07" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Integration Test for Join Community" timestamp="2016-04-20T19:25:07" tests="9" failures="0" time="0.24000000000000002">
+    <testcase name="Root Suite Integration Test for Join Community test for signup with success" time="0.098" classname="test for signup with success">
+    </testcase>
+    <testcase name="Root Suite Integration Test for Join Community test for retrieving users list" time="0.03" classname="test for retrieving users list">
+    </testcase>
+    <testcase name="Root Suite Integration Test for Join Community test for retrieving a user data" time="0.024" classname="test for retrieving a user data">
+    </testcase>
+    <testcase name="Root Suite Integration Test for Join Community test for signup with used name" time="0.014" classname="test for signup with used name">
+    </testcase>
+    <testcase name="Root Suite Integration Test for Join Community test for signup with banned name" time="0.012" classname="test for signup with banned name">
+    </testcase>
+    <testcase name="Root Suite Integration Test for Join Community test for login with success" time="0.017" classname="test for login with success">
+    </testcase>
+    <testcase name="Root Suite Integration Test for Join Community test for login with wrong password" time="0.011" classname="test for login with wrong password">
+    </testcase>
+    <testcase name="Root Suite Integration Test for Join Community test for login with unused name" time="0.012" classname="test for login with unused name">
+    </testcase>
+    <testcase name="Root Suite Integration Test for Join Community test for login with banned name" time="0.022" classname="test for login with banned name">
+    </testcase>
+  </testsuite>
+  <testsuite name="Integration Test for Post Announcement" timestamp="2016-04-20T19:25:07" tests="2" failures="0" time="0.036000000000000004">
+    <testcase name="Root Suite Integration Test for Post Announcement test for POST announcement" time="0.017" classname="test for POST announcement">
+    </testcase>
+    <testcase name="Root Suite Integration Test for Post Announcement test for GET all announcement" time="0.019" classname="test for GET all announcement">
+    </testcase>
+  </testsuite>
+  <testsuite name="Unit Test for Administer User Profile" timestamp="2016-04-20T19:25:07" tests="3" failures="0" time="0.013000000000000001">
+    <testcase name="Root Suite Unit Test for Administer User Profile Activate Citizen" time="0.003" classname="Activate Citizen">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Administer User Profile Deactivate Citizen" time="0.003" classname="Deactivate Citizen">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Administer User Profile Update Citizen Profile" time="0.007" classname="Update Citizen Profile">
+    </testcase>
+  </testsuite>
+  <testsuite name="Chat Test" timestamp="2016-04-20T19:25:07" tests="7" failures="0" time="0.009000000000000001">
+    <testcase name="Root Suite Chat Test Set the message type" time="0.002" classname="Set the message type">
+    </testcase>
+    <testcase name="Root Suite Chat Test Set the message content" time="0.001" classname="Set the message content">
+    </testcase>
+    <testcase name="Root Suite Chat Test Set the roomId" time="0.001" classname="Set the roomId">
+    </testcase>
+    <testcase name="Root Suite Chat Test Set the timestamp" time="0.001" classname="Set the timestamp">
+    </testcase>
+    <testcase name="Root Suite Chat Test Set the fromName" time="0.002" classname="Set the fromName">
+    </testcase>
+    <testcase name="Root Suite Chat Test Get history data for chat privately" time="0.001" classname="Get history data for chat privately">
+    </testcase>
+    <testcase name="Root Suite Chat Test Get history data for public chat" time="0.001" classname="Get history data for public chat">
+    </testcase>
+  </testsuite>
+  <testsuite name="Picture Test" timestamp="2016-04-20T19:25:08" tests="4" failures="0" time="0.003">
+    <testcase name="Root Suite Picture Test post public picture" time="0.001" classname="post public picture">
+    </testcase>
+    <testcase name="Root Suite Picture Test post private picture" time="0" classname="post private picture">
+    </testcase>
+    <testcase name="Root Suite Picture Test get private picture roomId" time="0.001" classname="get private picture roomId">
+    </testcase>
+    <testcase name="Root Suite Picture Test Delete All Data in DB" time="0.001" classname="Delete All Data in DB">
+    </testcase>
+  </testsuite>
+  <testsuite name="Announcement Test" timestamp="2016-04-20T19:25:08" tests="2" failures="0" time="0.003">
+    <testcase name="Root Suite Announcement Test Set the location" time="0.002" classname="Set the location">
+    </testcase>
+    <testcase name="Root Suite Announcement Test Get history data for announcement" time="0.001" classname="Get history data for announcement">
+    </testcase>
+  </testsuite>
+  <testsuite name="Announcement Test" timestamp="2016-04-20T19:25:08" tests="2" failures="0" time="0.002">
+    <testcase name="Root Suite Announcement Test Set the location" time="0.001" classname="Set the location">
+    </testcase>
+    <testcase name="Root Suite Announcement Test Get history data for announcement" time="0.001" classname="Get history data for announcement">
+    </testcase>
+  </testsuite>
+  <testsuite name="Unit Test for Join Community" timestamp="2016-04-20T19:25:08" tests="13" failures="0" time="0.019000000000000003">
+    <testcase name="Root Suite Unit Test for Join Community Compare the correct name to Citizen name" time="0.001" classname="Compare the correct name to Citizen name">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Join Community Create citizen class" time="0.002" classname="Create citizen class">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Join Community Compare the correct pass to Citizen pass" time="0.001" classname="Compare the correct pass to Citizen pass">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Join Community Compare the incorrect name to Citizen name" time="0.001" classname="Compare the incorrect name to Citizen name">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Join Community Compare the incorrect pass to Citizen pass" time="0.001" classname="Compare the incorrect pass to Citizen pass">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Join Community Display Citizen name" time="0.002" classname="Display Citizen name">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Join Community Display Citizen pass" time="0" classname="Display Citizen pass">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Join Community Update Citizen to online" time="0.001" classname="Update Citizen to online">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Join Community Update Citizen to offline" time="0.002" classname="Update Citizen to offline">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Join Community Save Citizen in DB citizens" time="0.001" classname="Save Citizen in DB citizens">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Join Community Add Citizen to Directory and Display citizens in Directory" time="0.002" classname="Add Citizen to Directory and Display citizens in Directory">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Join Community Find exist citizen in Directory" time="0.003" classname="Find exist citizen in Directory">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Join Community Find unexist citizen in Directory" time="0.002" classname="Find unexist citizen in Directory">
+    </testcase>
+  </testsuite>
+  <testsuite name="Unit Test for Share Location" timestamp="2016-04-20T19:25:08" tests="2" failures="0" time="0.013000000000000001">
+    <testcase name="Root Suite Unit Test for Share Location Update Citizen status with GPS" time="0.006" classname="Update Citizen status with GPS">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Share Location Update Citizen status without GPS" time="0.007" classname="Update Citizen status without GPS">
+    </testcase>
+  </testsuite>
+  <testsuite name="Unit Test for Share Supply" timestamp="2016-04-20T19:25:08" tests="6" failures="0" time="0.042">
+    <testcase name="Root Suite Unit Test for Share Supply Update supply" time="0.005" classname="Update supply">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Share Supply Give supply with success" time="0.01" classname="Give supply with success">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Share Supply Give supply with failure" time="0.007" classname="Give supply with failure">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Share Supply Get supply with success" time="0.01" classname="Get supply with success">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Share Supply Get supply with failure" time="0.01" classname="Get supply with failure">
+    </testcase>
+    <testcase name="Root Suite Unit Test for Share Supply Delete All Data in DB" time="0" classname="Delete All Data in DB">
+    </testcase>
+  </testsuite>
+</testsuites>

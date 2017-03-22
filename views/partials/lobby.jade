@@ -1,0 +1,57 @@
+div
+    div.row
+        div.col-xs-3 SSNoC
+        div.col-xs-4 {{ userName }}
+        div.col-xs-2
+            img.img-responsive.center-block(ng-src='images/status{{statusCode}}.png')
+        div.col-xs-3 {{ location.name }}
+
+    h5.row.text-center
+        div.col-xs-4
+            a(href="", ng-click="goDirectory()") Directory
+        div.col-xs-4
+            a(href="", ng-click="goMessages()") Message
+        div.col-xs-4
+            a(href="", ng-click="goShareStatus()") Status
+    h5.row.text-center
+        div.col-xs-4
+            a(href="", ng-click="goAnnouncement()" ) Announce
+        div.col-xs-4
+            a(href="", ng-click="goMeasurement()" ng-show = "privilege == 'Monitor' || privilege == 'Administrator'") Measure
+        div.col-xs-4
+            a(href="", ng-click="goAdminProfile()" ng-show = "privilege == 'Administrator'" ) AdminProfile
+    h5.row.text-center
+        div.col-xs-4
+            a(href="", ng-click="goPrivateSupply()") Private supply
+        div.col-xs-4
+            a(href="", ng-click="goPublicWarehouse()") Public warehouse
+        div.col-xs-4
+            a(href="", ng-click="logout()") Logout
+
+
+    div(ng-repeat="info in latest")
+        a(href="", ng-click='goPrivateChat(info.userName)') {{info.userName}} {{info.type}} {{info.timestamp}}
+
+    div(ng-repeat="info in videoRequest")
+        a(href="", ng-click='goVideoChat(info.userName)') {{info.userName}} {{info.type}} {{info.timestamp}}
+
+
+    div(ng-repeat="info in latestPublic")
+        a(href="", ng-click='goMessages()') {{info.userName}} {{info.type}} {{info.timestamp}}
+
+
+div(ui-view="home")
+div(ui-view="directory")
+div(ui-view="privateChat")
+div(ui-view="videoChat")
+div(ui-view="messages")
+div(ui-view="shareStatus")
+div(ui-view="announcement")
+div(ui-view="measurement")
+
+div(ui-view="privateSupply")
+div(ui-view="publicWarehouse")
+
+div(ui-view="adminProfile")
+div(ui-view="editProfile")
+

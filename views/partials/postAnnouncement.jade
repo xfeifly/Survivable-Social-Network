@@ -1,0 +1,30 @@
+h3 Announcement:
+label
+    | Information:
+    input(ng-model='query.announcement', placeholder='Search for all the Chat Info' autofocus)
+br
+button(ng-disabled='currentPage == 0', ng-click='currentPage=currentPage-1')
+    | Previous
+|     {{currentPage+1}}/{{numberOfPages()}}
+button(ng-disabled='currentPage >= announcements.length/pageSize - 1', ng-click='currentPage=currentPage+1')
+    | Next
+
+h5 {{ privilege }}
+#content
+    #chat
+        #messages
+            //.overflowable
+            ul
+                li.message(ng-repeat="ann in announcements | lowercase | annStopWordFilter: query.announcement | startfrom : pageSize*currentPage| limitTo: pageSize" track by $index)
+                    div.chat-message-name {{ann.fromName}}:
+                    div.chat-message-timestamp {{ann.timestamp}}
+                    div {{ann.message}}
+                    div at location: {{ann.location}}
+        div.clearer
+        .controls
+            form(ng-submit='postAnnouncement()' ng-show = 'privilege == "Coordinator" || privilege == "Administrator"')
+                input#field(ng-model='announcement' placeholder='Announcement')
+                input#field1(ng-model='location' placeholder='Location')
+                input#send(type='submit', value='send')
+
+

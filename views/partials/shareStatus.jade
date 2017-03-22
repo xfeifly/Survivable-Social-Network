@@ -1,0 +1,47 @@
+h3 Share Status
+h5.row
+    div.col-xs-4 Your Name:
+    div.col-xs-8 {{ userName }}
+h5.row
+    div.col-xs-4 Your Status:
+    div.col-xs-8 {{ statusCode }}
+h5.row
+    div.col-xs-4 Your Supply:
+    div.col-xs-8 Water: {{food}}, Food: {{water}}
+h5.row
+    div.col-xs-4 Your Location:
+    div.col-xs-4 {{ location.name }}
+    div.col-xs-4(ng-show='location.gps') ({{location.lat|number:3}}, {{location.lng|number:3}})
+h5.row
+    div.col-xs-4 Last Update:
+    div.col-xs-8 {{ updatedAt }}
+
+
+form.form-horizontal
+    div.form-group
+        select.form-control(name ='selectedStatusCode', ng-model='selectedStatusCode')
+            option(value='') --Please Select Your Current Status--
+            option(value='OK') OK
+            option(value='Help') Help
+
+            option(value='Emergency') Emergency
+            option(value='Undefined') Undefined
+    div.form-group
+        input.form-control(name="selectedLocation", placeholder='Location', type='text', ng-model='selectedLocation')
+    div.form-group
+        input.form-control(name="waterSupply", placeholder='Water supply', type='number',ng-model='waterSupply')
+    div.form-group
+        input.form-control(name="foodSupply", placeholder='Food supply', type='number',ng-model='foodSupply')
+    div.form-group
+        h5.row
+            a.col-xs-4(href="", ng-click='getPosition()') Get Position
+            div.col-xs-8 {{instruction}}
+        h5.row
+            div.col-xs-4 Latitude:
+            div.col-xs-8(ng-show='gps') {{lat | number:3}}
+        h5.row
+            div.col-xs-4 Longitude:
+            div.col-xs-8(ng-show='gps') {{lng | number:3}}
+    div.form-group.row
+        div.col-xs-2
+            button.btn.btn-info(type='submit', ng-click='shareStatus()') Submit

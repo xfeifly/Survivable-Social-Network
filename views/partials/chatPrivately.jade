@@ -1,0 +1,55 @@
+h4 {{ partner.userName }}
+h5.row
+    div.col-xs-4 Status:
+    div.col-xs-8 {{ partner.statusCode }} ({{partner.isOnline}})
+h5.row
+    div.col-xs-4 Location:
+    div.col-xs-8
+        div {{ partner.location.name }}
+        div(ng-show='partner.location.gps') ({{partner.location.lat|number:3}}, {{partner.location.lng|number:3}})
+h5.row
+    a.col-xs-4(href="", ng-show='partner.location.gps', ng-click='measurePosition()') Measure Distance
+    div.col-xs-8
+        div(ng-show='instruction') {{instruction}}
+        div(ng-show='partner.position') {{partner.position.direction}} {{partner.position.distance|number:1}} m
+h5.row
+    div.col-xs-4 Last Update:
+    div.col-xs-8 {{ partner.updatedAt }}
+
+fieldset(data-ng-repeat="room in rooms" track by $index)
+    div.col(ng-show='room.showAllmsg')
+        //h3 Private Messages: To {{room.toName}}
+        button#closebutton(ng-click='closePrivatechat(room)') close
+        //button#historybutton(ng-click='showPrivatechatHistory(room)') History
+        label
+            | Information:
+            input(ng-model='query.message', placeholder='Search for all the Chat Info' autofocus)
+        br
+        button(ng-disabled='currentPage == 0', ng-click='currentPage=currentPage-1')
+            | Previous
+        |     {{currentPage+1}}/{{numberOfPages()}}
+        button(ng-disabled='currentPage >= room.messages.length/pageSize - 1', ng-click='currentPage=currentPage+1')
+            | Next
+        #content2
+            #chat2
+                #messages2
+                    //.overflowable
+                    ul
+                        li.message(ng-repeat="msg in room.messages |lowercase | stopWordFilter: query.message  | startfrom : pageSize*currentPage| limitTo: pageSize " track by $index)
+                            div.chat-message-name {{msg.fromName}}:
+                            div.chat-message-timestamp {{msg.timestamp}}
+                            div {{msg.message}}
+                            img.chat-image(ng-src="uploads/{{msg.picture}}")
+                            div From: {{msg.fromLocation}}
+                div.clearer
+                .controls
+                    form(ng-submit='sendMessage(room)')
+                        input#field2(ng-model='room.message',placeholder="Your mesasge")
+                        input#send2(type='submit', value='chat')
+                        input#field3(ng-model='room.fromLocation', placeholder="Your location")
+                        input(type="file", name ="file" onchange="angular.element(this).scope().uploadImage(this.files)")
+                    button(ng-click="uploadFile(room)") Upload
+
+
+    div(ng-show='room.showLatest') {{room.latestMessage.fromName}}: {{room.latestMessage.message}} at {{room.latestMessage.timestamp}}
+        button(ng-click='replyTosender(room)') Reply?

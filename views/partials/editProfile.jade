@@ -1,0 +1,42 @@
+//   Created by Ethan
+h5 {{ privilegeOptions.selectedOption.name }}
+form.form-inline
+    div.form-group
+        label(for='untext') UserName:
+        input#untext.form-control(type='text' ng-model = "userName" ng-disabled="!userNameEnable")
+        label(for='uncheckbox') change username:
+        input#uncheckbox(type='checkbox', ng-model="userNameEnable")
+//h5.row
+//    div.col-sm-6
+//        label Password:
+//        input(type='text' ng-model = "password" ng-disabled="userPwdEnable")
+//    div.col-sm-6
+//        label change password:
+//        input.form-dis(type='checkbox', ng-model="userPwdEnable")
+br
+form.form-inline
+    div.form-group
+        label Password:
+        input.form-control(type='text' ng-model = "password" ng-disabled="!userPwdEnable")
+        label change password:
+        input(type='checkbox', ng-model="userPwdEnable")
+        br
+h5.row
+    div.col-sm-6
+        label Privilege:
+        select#privilege1(name = "myprivilege", ng-options='option.name for option in privilegeOptions.availableOptions',ng-model='privilegeOptions.selectedOption' )
+        br
+div.col.sm-6
+    button.btn.btn-info(type='submit' ng-click='updateProfile()') update profile
+h5 {{ instruction }}
+
+h5.row
+    div.col-sm-6
+        label Account Status:
+        select(ng-options="option.name for option in accountStatusOptions.availableOptions",ng-model='accountStatusOptions.selectedOption' )
+        br
+div.col.sm-12
+    button.btn.btn-info(type='submit' ng-click='updateAccountStatus()') update account Status
+
+
+

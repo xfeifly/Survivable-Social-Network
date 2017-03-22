@@ -1,0 +1,43 @@
+h4 videoChat
+h4 {{ partner.userName }}
+h5.row
+    div.col-xs-4 Status:
+    div.col-xs-8 {{ partner.statusCode }} ({{partner.isOnline}})
+h5.row
+    div.col-xs-4 Location:
+    div.col-xs-8
+        div {{ partner.location.name }}
+        div(ng-show='partner.location.gps') ({{partner.location.lat|number:3}}, {{partner.location.lng|number:3}})
+h5.row
+    a.col-xs-4(href="", ng-show='partner.location.gps', ng-click='measurePosition()') Measure Distance
+    div.col-xs-8
+        div(ng-show='instruction') {{instruction}}
+        div(ng-show='partner.position') {{partner.position.direction}} {{partner.position.distance|number:1}} m
+h5.row
+    div.col-xs-4 Last Update:
+    div.col-xs-8 {{ partner.updatedAt }}
+
+h5 {{ videoRoomName }}
+h5 {{videoinfo}}
+h5.row
+    //div.col-xs-3
+    //    button(ng-click='start()') Start Video chat
+    div.col-xs-3
+        button(ng-click='hangUp()') Close Video chat
+    div.col-xs-3
+        button(ng-click='mute()') mute
+        button(ng-click='unmute()') unmute
+    div.col-xs-3
+        button(ng-click='pause()') pause
+        button(ng-click='resume()') resume
+h2.row
+
+    div.col-xs-6.col-md-6
+        h4 {{ selfName}}
+        #localVideo(muted='')
+    div.col-xs-6.col-md-6
+        h4 {{ partner.userName}}
+        #remoteVideo
+
+
+

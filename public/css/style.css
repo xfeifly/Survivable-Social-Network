@@ -1,0 +1,172 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.menu{
+	background-color: #b9def0;
+}
+
+.status {
+	display: flex;
+}
+
+
+#img {
+	max-width: 200px;
+	height: 200px;
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+
+#content #chat #messages,
+#content2 #chat2 #messages2 {
+	max-width: 500px;
+    height: 300px;
+    max-height: 400px;
+    margin: 0 0 20px 0;
+    border: solid 1px #999;
+    overflow-y: auto;
+    font-size: 16px;
+}
+
+#content #chat #supplys {
+	max-width: 500px;
+	height: 150px;
+	max-height: 400px;
+	margin: 0 0 20px 0;
+	border: solid 1px #999;
+	overflow-y: auto;
+	font-size: 20px;
+}
+
+#content #chat #messages li:nth-child(odd),
+#content2 #chat2 #messages2 li:nth-child(odd) {
+    background: #eee;
+}
+
+#imgshow{
+	height: auto;
+	width: auto;
+}
+#timestamp{
+    font-size: 14px;
+}
+
+#content #chat,
+#content #users {
+	float:none;
+}
+
+.controls input#field,
+.controls input#field2,
+.controls input#field3 {
+	width: calc(100% - 85px);
+}
+
+.controls input#send,
+.controls input#send2,
+.controls input#send3{
+	width: 85px;
+}
+
+.controls form {
+	max-width: 500px;
+}
+
+#chatPrivate{
+    float:none;
+    font-size: 15px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#userList {
+	margin: 5px;
+	margin-top: 40px;
+}
+
+.users {
+	padding: 5px 10px;
+	background-color: #DFF0D8;
+	opacity: 0.6;
+	border-radius: 10px;
+	margin: 5px 0 5px 0;
+	float: none;
+	width: 100%;
+}
+
+.timestamp{
+	font-size:13px;
+}
+
+.user {
+	font-size: 18px;
+	color: #000;
+	display: inline-table;
+	width: 100%;
+}
+
+.overflowable {
+	height: 240px;
+	overflow-y: auto;
+	border: 1px solid #000;
+}
+
+.overflowable p {
+	margin: 0;
+}
+
+.clr {
+	clear: both;
+}
+
+.message {
+    list-style-type: none;
+}
+
+ul {
+	line-height: 2;
+    padding-left: 0;
+}
+
+.chat-message-name {
+    display: inline-block;
+    font-size:13px;
+}
+
+.chat-message-timestamp {
+    display: inline-block;
+    float: right;
+    font-size:13px;
+}
+
+.privateSupply{
+	display: inline-block;
+	font-size:20px;
+}
+
+.separator {
+    border: 1px solid black;
+}
+
+#remoteVideo {
+	height: 50px;
+	width: 50px;
+}
+#localVideo {
+	height: 50px;
+	width: 50px;
+}
+
+#closebutton,
+#historybutton {
+	width: 70px;
+}
+
+.chat-image{
+	max-width: 150px;
+	max-height: 200px;
+}

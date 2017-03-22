@@ -1,0 +1,16 @@
+h3 Measure Performance
+form.form-horizontal
+    div.form-group
+        input.form-control(name="duration", placeholder='Duration(seconds)', type='text', ng-model='duration')
+    div.form-group
+        input.form-control(name="interval", placeholder='Interval(milliseconds)', type='text', ng-model='interval')
+    div.form-group.row
+        div.col-xs-2
+            button.btn.btn-info(type='submit', ng-click='startMeasurement()') Start
+        div.col-xs-offset-1.col-xs-2
+            button.btn.btn-info(type='button', ng-click='stopMeasurement()') Stop
+    div {{ instruction }}
+div
+    p Results are shown below
+    div(ng-repeat="result in results")
+        div <{{result.type}}> Performance:{{result.performance | number:3}}(requests/s), Duration:{{ result.duration }}(s), Interval:{{ result.interval }}(ms)

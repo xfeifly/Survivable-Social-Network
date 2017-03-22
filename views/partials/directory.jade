@@ -1,0 +1,48 @@
+h3.row User Directory
+h5.row
+    a.col-xs-4(href="", ng-click='measurePosition()') Get Position
+    div.col-xs-8 {{instruction}}
+
+label
+    | Any attibute:
+    input.form-control(ng-model='query.$', placeholder='Search for All the attibutes' autofocus)
+br
+label
+    | User Name:
+    input.form-control(ng-model='query.userName', placeholder='Search for All the userName' autofocus)
+br
+label
+    | Any status:
+    input.form-control(ng-model='query.isOnline', placeholder='Search for All the statusCode' autofocus)
+br
+
+
+div.users.user(ng-repeat="user in users | filter:query |  orderBy: order")
+    div.row(ng-show = 'user.accountStatus == "Active" ')
+        h5.col-xs-3
+            a(href="", ng-click='goPrivateChat(user.userName)') {{ user.userName }}
+            //form.col-xs-4(ng-submit='goPrivateChat(user.userName)')
+                input(type='submit',value='message')
+            br
+            small {{ user.isOnline }}
+            br
+            small Water: {{user.supply.water}};
+            small Food: {{user.supply.food}}
+        //h6.col-xs-2
+            //img.img-responsive(ng-src='images/status{{user.statusCode}}.png')
+
+        h6.col-xs-3
+            div {{ user.statusCode }}
+            br
+            a(href="", ng-click='goVideoChat(user.userName)')  VideoChat
+                //form.col-xs-4(ng-submit='goPrivateChat(user.userName)')
+                    input(type='submit',value='message')
+
+
+        h6.col-xs-3
+            div {{ user.location.name }}
+            br
+            div(ng-show='user.location.gps && !user.position') GPS
+            div(ng-show='user.position') {{ user.position.direction}} {{ user.position.distance|number:0 }} m
+
+        h6.col-xs-3 {{ user.updatedAt }}

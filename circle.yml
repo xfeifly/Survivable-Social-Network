@@ -1,0 +1,32 @@
+# setup node environment
+machine:
+  node:
+    version: 4.1.2
+
+# merge master before testing to make sure all tests pass
+# with the updated version of master
+checkout:
+   post:
+   # Sometimes git might ask for your identity and block the build. Add one valid account here:
+    - git config user.email "ethanlinlyc@gmail.com" 
+    - git config user.name "Ethanlin013"
+   # Merge with master on CircleCI before running the tests.
+    - git rebase origin/master
+
+# install dependencies
+dependencies:
+  override:
+    - npm install -g grunt-cli mocha istanbul bower
+    - npm install
+    - npm install sqlite3
+    - bower install
+    - bower install
+    - npm install -g karma
+    - npm install -g karma-coverage karma-jasmine karma-phantomjs-launcher karma-coveralls phantomjs-prebuilt jasmine-core
+
+# run tests
+test:
+  override:
+    - mkdir -p $CIRCLE_TEST_REPORTS/mocha
+    - grunt karmatest
+    - grunt circleci

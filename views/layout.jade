@@ -1,0 +1,60 @@
+doctype html
+html(ng-app="myApp")
+  head
+    title FSE SSNoC
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    link(rel='stylesheet', href='/libs/bootswatch-dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/libs/angular-bootstrap/ui-bootstrap-csp.css')
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    // Libraries
+    script(src='/libs/angular/angular.js')
+    script(src='/libs/angular-bootstrap/ui-bootstrap-tpls.js')
+    script(src='/libs/angular-ui-router/release/angular-ui-router.min.js')
+    script(src='/libs/angular-messages/angular-messages.min.js')
+    script(src='/libs/jquery/dist/jquery.min.js')
+    script(src='/libs/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/socket.io/socket.io.js')
+    //simplewebrtc
+    script(src="http://simplewebrtc.com/latest.js")
+    script(src='/socket.io/socket.io.js')
+
+
+
+    // Services
+    script(src='/app/services/homeService.js')
+    script(src='/app/services/userService.js')
+    script(src='/app/services/announcementService.js')
+    script(src='/app/services/chatService.js')
+    script(src='/app/services/partnerService.js')
+    script(src='/app/services/supplyService.js')
+
+    // Controllers, etc...
+    script(src='/app/main.js')
+    script(src='/app/directive/directives.js')
+    script(src='/app/directive/fileModel.js')
+    script(src='/app/controllers/chatPrivateController.js')
+    script(src='/app/controllers/homePageController.js')
+    script(src='/app/controllers/lobbyPageController.js')
+    script(src='/app/controllers/announcementController.js')
+    script(src='/app/controllers/shareStatusController.js')
+    script(src='/app/controllers/chatController.js')
+    script(src='/app/controllers/directoryController.js')
+    script(src='/app/controllers/measurementController.js')
+    script(src='/app/controllers/videoChatController.js')
+
+    script(src='/app/controllers/privateSupplyController.js')
+    script(src='/app/controllers/publicWarehouseController.js')
+
+    script(src='/app/controllers/adminProfileController.js')
+    script(src='/app/controllers/editProfileController.js')
+
+
+
+
+    // Filters
+    script(src='/app/filter/filter.js')
+    script(src='/app/filter/myStopWordFilter.js')
+    script(src='/app/filter/myAnnStopWordFilter.js')
+    div(ui-view)
+

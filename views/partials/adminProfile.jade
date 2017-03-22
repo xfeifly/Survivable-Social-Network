@@ -1,0 +1,26 @@
+//
+ //  Created by Ethan on 4/14/16.
+div
+   h5 I am adminProfile
+div.users.user(ng-repeat="user in users | filter:query |  orderBy: order")
+    div.row
+
+        h5.col-xs-3
+            a(href="", ng-click='goPrivateChat(user.userName)') {{ user.userName }}
+
+            br
+         //   small {{ user.isOnline }}
+
+
+        h6.col-xs-3
+            div {{ user.privilege }}
+
+
+
+        h6.col-xs-3
+            div {{ user.accountStatus }}
+
+
+        h6.col-xs-3
+            a(href="", ng-click = 'goEditUserProfile(user.userName)') Edit
+

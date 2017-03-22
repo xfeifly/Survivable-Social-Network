@@ -1,0 +1,21 @@
+h4 Current Supply Information:
+
+#content
+    #chat
+        #supplys
+            //.overflowable
+            ul
+                div.privateSupply Current Water: {{privateWater}}
+                br
+                div.privateSupply Current Food:  {{privateFood}}
+        div.clearer
+        .controls
+h4 Do you want to share supply?
+            form(ng-submit='shareSupply()')
+                input#field(ng-model='sharewater' placeholder='Food' type='number')
+                input#field(ng-model='sharefood' placeholder='Water' type='number')
+                input#send(type='submit', value='Share')
+
+h5 Notice: You cannot share water or food when less than 5 units!
+
+

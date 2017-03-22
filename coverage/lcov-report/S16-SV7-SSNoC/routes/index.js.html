@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for S16-SV7-SSNoC/routes/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">S16-SV7-SSNoC/routes/</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.68% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>47/53</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.68% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>47/53</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var express = require('express');
+var router = express.Router();
+var joinCommunity = require('../controllers/joinCommunity.js');
+var postAnnouncement = require('../controllers/postAnnouncement.js');
+var shareStatus = require('../controllers/shareStatus.js');
+var administerProfile = require('../controllers/administerProfile.js');
+&nbsp;
+var chatPublicly = require('../controllers/chatPublicly.js');
+var chatPrivately = require('../controllers/chatPrivately.js');
+var measurePerformance = require('../controllers/measurePerformance.js');
+var shareSupply = require('../controllers/shareSupply.js');
+&nbsp;
+var multer  = require('multer');
+var upload = multer({
+    dest: "public/uploads"
+});
+&nbsp;
+&nbsp;
+router.get("/measurement", measurePerformance.initialize);
+router.get("/measurement/post/start", measurePerformance.postStart);
+router.post("/measurement/post", measurePerformance.post);
+router.get("/measurement/post/end", measurePerformance.postEnd);
+router.get("/measurement/get/start", measurePerformance.getStart);
+router.get("/measurement/get", measurePerformance.get);
+router.get("/measurement/get/end", measurePerformance.getEnd);
+router.all("/*", measurePerformance.checkMode);
+&nbsp;
+router.get('/', <span class="fstat-no" title="function not covered" >function (req, res) {</span>
+<span class="cstat-no" title="statement not covered" >	res.render('layout');</span>
+});
+router.get('/partials/:name', <span class="fstat-no" title="function not covered" >function (req, res) {</span>
+<span class="cstat-no" title="statement not covered" >	var name = req.params.name;</span>
+<span class="cstat-no" title="statement not covered" >	res.render('partials/' + name, <span class="fstat-no" title="function not covered" >function (err, html) {</span></span>
+<span class="cstat-no" title="statement not covered" >		if (err)</span>
+<span class="cstat-no" title="statement not covered" >			console.log(err);</span>
+		else
+<span class="cstat-no" title="statement not covered" >			res.send(html);</span>
+	});
+});
+&nbsp;
+/* REST API */
+router.get("/login", joinCommunity.login);
+router.get("/logout", joinCommunity.logout);
+router.get("/users", joinCommunity.directory);
+router.get("/users/:userName", joinCommunity.citizen);
+router.post("/users/:userName", joinCommunity.signup);
+router.put("/users/:userName", administerProfile.updateProfile);
+router.post("/users/:userName/status", shareStatus.status);
+router.put("/users/:userName/inactive", administerProfile.deactivate);
+router.put("/users/:userName/active", administerProfile.activate);
+&nbsp;
+router.post("/messages/public", chatPublicly.postPublicMsg);
+router.get("/messages/public", chatPublicly.getPublicChatMsg);
+router.get("/messages/private", chatPrivately.getPrivateChatMsg);
+router.post("/messages/private", chatPrivately.postPrivateMsg);
+&nbsp;
+router.post("/pictures/public", upload.single("pubicfile"), chatPublicly.postPublicPicName);
+router.get("/pictures/public", chatPublicly.postPublicPic);
+router.post("/pictures/private", upload.single("file"), chatPrivately.postPrivatePicName);
+router.get("/pictures/private", chatPrivately.postPrivatePic);
+&nbsp;
+router.post("/messages/announcements", postAnnouncement.postAnnouncement);
+router.get("/messages/announcements", postAnnouncement.getAllannouncement);
+&nbsp;
+router.get("/supply", shareSupply.publicSupply);
+router.post("/supply/give", shareSupply.giveSupply);
+router.post("/supply/get", shareSupply.getSupply);
+router.post("/supply/update", shareSupply.updateSupply);
+&nbsp;
+/* for test */
+router.get("/deleteAllUsers", joinCommunity.deleteCitizenDB);
+&nbsp;
+&nbsp;
+module.exports = router;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 19 2016 18:14:30 GMT-0700 (PDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

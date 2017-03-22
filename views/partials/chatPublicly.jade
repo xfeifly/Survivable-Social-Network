@@ -1,0 +1,30 @@
+h3 Public Messages:
+label
+    | Information:
+    input(ng-model='query.message', placeholder='Search for all the Chat Info' autofocus)
+br
+button(ng-disabled='currentPage == 0', ng-click='currentPage=currentPage-1')
+    | Previous
+|     {{currentPage+1}}/{{numberOfPages()}}
+button(ng-disabled='currentPage >= messages.length/pageSize - 1', ng-click='currentPage=currentPage+1')
+    | Next
+#content
+    #chat
+        #messages
+            //.overflowable
+            ul
+                li.message(ng-repeat="msg in messages | lowercase | stopWordFilter: query.message  | startfrom : pageSize*currentPage| limitTo: pageSize" track by $index)
+                    div.chat-message-name {{msg.fromName}}
+                    div.chat-message-timestamp {{msg.timestamp}}
+                    div {{msg.message}}
+                    img.chat-image(ng-src="uploads/{{msg.picture}}")
+                    div From: {{msg.fromLocation}}
+        div.clearer
+        .controls
+            form(ng-submit='sendMessage()')
+                input#field(ng-model='message',placeholder="Your mesasge")
+                input#send(type='submit', value='chat')
+                input#field3(ng-model='fromLocation', placeholder="Your location")
+                input(type="file", name ="file" onchange="angular.element(this).scope().uploadImage(this.files)")
+            button(ng-click="uploadFile()") Upload
+
